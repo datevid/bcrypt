@@ -6,7 +6,7 @@ const BcryptDefinition = () => {
         <div className="bcrypt-container">
             <h1 className="bcrypt-title">¿Qué es Bcrypt?</h1>
             <p>
-                <strong>Bcrypt</strong> es una función de hash diseñada específicamente para proteger contraseñas. Fue desarrollada en 1999 por Niels Provos y David Mazières y está basada en el algoritmo de cifrado Blowfish. A diferencia de los algoritmos de hash más tradicionales como MD5 o SHA-1, Bcrypt incorpora un factor de "coste" que hace que el proceso de generación del hash sea más lento y, por ende, más resistente a ataques de fuerza bruta.
+                <strong>Bcrypt</strong> es una función de hash diseñada específicamente para proteger contraseñas. Fue desarrollada en 1999 por Niels Provos y David Mazières y está basada en el algoritmo de cifrado Blowfish. A diferencia de los algoritmos de hash más tradicionales como MD5 o SHA-1, Bcrypt incorpora un factor de coste que hace que el proceso de generación del hash sea más lento y, por ende, más resistente a ataques de fuerza bruta.
             </p>
 
             <h2 className="bcrypt-subtitle">¿Cómo funciona Bcrypt?</h2>
