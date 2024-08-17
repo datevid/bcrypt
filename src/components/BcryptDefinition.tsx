@@ -11,7 +11,7 @@ const BcryptDefinition = () => {
 
             <h2 className="bcrypt-subtitle">¿Cómo funciona Bcrypt?</h2>
             <p>
-                Bcrypt toma como entrada una contraseña y un valor adicional llamado "sal" (salt). El sal es un conjunto de datos aleatorios que se genera para cada contraseña antes de aplicar el algoritmo de hash. Este paso es crucial porque garantiza que incluso si dos usuarios tienen la misma contraseña, los hashes resultantes serán diferentes debido a la variación en los sal.
+                Bcrypt toma como entrada una contraseña y un valor adicional llamado sal (salt). El sal es un conjunto de datos aleatorios que se genera para cada contraseña antes de aplicar el algoritmo de hash. Este paso es crucial porque garantiza que incluso si dos usuarios tienen la misma contraseña, los hashes resultantes serán diferentes debido a la variación en los sal.
             </p>
             <p>El proceso de Bcrypt se puede desglosar en los siguientes pasos:</p>
             <ul>
