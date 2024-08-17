@@ -42,6 +42,10 @@ const BcryptDefinition = () => {
             <p>
                 Bcrypt se ha convertido en un estándar de facto para la protección de contraseñas debido a su capacidad para resistir ataques de fuerza bruta y su flexibilidad para adaptarse a los avances en tecnología. Implementar Bcrypt en aplicaciones donde se manejan contraseñas es una medida esencial para asegurar que los datos de los usuarios estén protegidos de posibles brechas de seguridad.
             </p>
+            <p>
+                <a href="https://twitter.com/datevid" target="_blank">@Datevid</a>
+            </p>
+            
         </div>
     );
 };
