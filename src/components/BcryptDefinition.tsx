@@ -6,12 +6,12 @@ const BcryptDefinition = () => {
         <div className="bcrypt-container">
             <h1 className="bcrypt-title">¿Qué es Bcrypt?</h1>
             <p>
-                <strong>Bcrypt</strong> es una función de hash diseñada específicamente para proteger contraseñas. Fue desarrollada en 1999 por Niels Provos y David Mazières y está basada en el algoritmo de cifrado Blowfish. A diferencia de los algoritmos de hash más tradicionales como MD5 o SHA-1, Bcrypt incorpora un factor de "coste" que hace que el proceso de generación del hash sea más lento y, por ende, más resistente a ataques de fuerza bruta.
+                <strong>Bcrypt</strong> es una función de hash diseñada específicamente para proteger contraseñas. Fue desarrollada en 1999 por Niels Provos y David Mazières y está basada en el algoritmo de cifrado Blowfish. A diferencia de los algoritmos de hash más tradicionales como MD5 o SHA-1, Bcrypt incorpora un factor de coste que hace que el proceso de generación del hash sea más lento y, por ende, más resistente a ataques de fuerza bruta.
             </p>
 
             <h2 className="bcrypt-subtitle">¿Cómo funciona Bcrypt?</h2>
             <p>
-                Bcrypt toma como entrada una contraseña y un valor adicional llamado "sal" (salt). El sal es un conjunto de datos aleatorios que se genera para cada contraseña antes de aplicar el algoritmo de hash. Este paso es crucial porque garantiza que incluso si dos usuarios tienen la misma contraseña, los hashes resultantes serán diferentes debido a la variación en los sal.
+                Bcrypt toma como entrada una contraseña y un valor adicional llamado sal (salt). El sal es un conjunto de datos aleatorios que se genera para cada contraseña antes de aplicar el algoritmo de hash. Este paso es crucial porque garantiza que incluso si dos usuarios tienen la misma contraseña, los hashes resultantes serán diferentes debido a la variación en los sal.
             </p>
             <p>El proceso de Bcrypt se puede desglosar en los siguientes pasos:</p>
             <ul>
@@ -42,6 +42,10 @@ const BcryptDefinition = () => {
             <p>
                 Bcrypt se ha convertido en un estándar de facto para la protección de contraseñas debido a su capacidad para resistir ataques de fuerza bruta y su flexibilidad para adaptarse a los avances en tecnología. Implementar Bcrypt en aplicaciones donde se manejan contraseñas es una medida esencial para asegurar que los datos de los usuarios estén protegidos de posibles brechas de seguridad.
             </p>
+            <p>
+                <a href="https://twitter.com/datevid" target="_blank">@Datevid</a>
+            </p>
+            
         </div>
     );
 };
