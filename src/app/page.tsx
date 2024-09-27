@@ -1,11 +1,13 @@
 import Image from "next/image";
-import BcryptGenerator from "@/app/bcrypt/page";
-import Home from "@/app/home/page";
+import BcryptGeneratorEn from "@/app/bcrypt-en/page";
+import Home from "@/app/en/page";
+import BcryptDefinitionEn from "@/app/bcrypt-definition/page";
+import React from "react";
 
 export default function Default() {
   return(
       <>
-          <Home/>
+          <BcryptDefinitionEn></BcryptDefinitionEn>
       </>
 
   )

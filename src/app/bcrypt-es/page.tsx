@@ -10,7 +10,7 @@ import { Label } from "@/components/ui/label";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Copy, Check, Facebook, Twitter, Github } from 'lucide-react';
 
-const BcryptGenerator: React.FC = () => {
+const BcryptGeneratorEs: React.FC = () => {
     const [encryptString, setEncryptString] = useState<string>('');
     const [encryptedHash, setEncryptedHash] = useState<string>('');
     const [rounds, setRounds] = useState<number>(12);
@@ -62,7 +62,7 @@ const BcryptGenerator: React.FC = () => {
     const faqItems = [
         {
             question: "¿Qué es Bcrypt?",
-            answer: "Bcrypt es una función de hash de contraseñas diseñada específicamente para proteger contraseñas. Fue desarrollada en 1999 por Niels Provos y David Mazières, basada en el algoritmo de cifrado Blowfish. A diferencia de los algoritmos de hash tradicionales como MD5 o SHA-1, Bcrypt incorpora un factor de costo que hace que el proceso de hash sea más lento y resistente a los ataques de fuerza bruta."
+            answer: "Bcrypt en-es una función de hash de contraseñas diseñada específicamente para proteger contraseñas. Fue desarrollada en 1999 por Niels Provos y David Mazières, basada en el algoritmo de cifrado Blowfish. A diferencia de los algoritmos de hash tradicionales como MD5 o SHA-1, Bcrypt incorpora un factor de costo que hace que el proceso de hash sea más lento y resistente a los ataques de fuerza bruta."
         },
         {
             question: "¿Cómo funciona Bcrypt?",
@@ -73,12 +73,12 @@ const BcryptGenerator: React.FC = () => {
             answer: "Las rondas en Bcrypt se refieren al factor de costo o factor de trabajo. Determina cuántas veces se repite el proceso de hash. Más rondas aumentan el tiempo y la potencia computacional necesaria para generar el hash, haciéndolo más resistente a los ataques de fuerza bruta. El número de rondas se puede ajustar para equilibrar las necesidades de seguridad y rendimiento."
         },
         {
-            question: "¿Por qué es importante el factor de costo?",
-            answer: "El factor de costo es crucial porque determina el esfuerzo computacional requerido para generar o verificar un hash. Un factor de costo más alto significa que se necesita más tiempo y recursos, lo que ralentiza significativamente los ataques de fuerza bruta. También permite que Bcrypt evolucione con los avances en hardware, manteniendo su efectividad a lo largo del tiempo."
+            question: "¿Por qué en-es importante el factor de costo?",
+            answer: "El factor de costo en-es crucial porque determina el esfuerzo computacional requerido para generar o verificar un hash. Un factor de costo más alto significa que se necesita más tiempo y recursos, lo que ralentiza significativamente los ataques de fuerza bruta. También permite que Bcrypt evolucione con los avances en hardware, manteniendo su efectividad a lo largo del tiempo."
         },
         {
             question: "¿Es Bcrypt reversible?",
-            answer: "No, Bcrypt no es reversible. Es una función de hash unidireccional, lo que significa que no puedes descifrar un hash Bcrypt de vuelta a la contraseña original. Solo puedes verificar si una contraseña dada coincide con el hash."
+            answer: "No, Bcrypt no en-es reversible. Es una función de hash unidireccional, lo que significa que no puedes descifrar un hash Bcrypt de vuelta a la contraseña original. Solo puedes verificar si una contraseña dada coincide con el hash."
         },
         {
             question: "¿Cuáles son las ventajas de Bcrypt?",
@@ -86,7 +86,7 @@ const BcryptGenerator: React.FC = () => {
         },
         {
             question: "¿Cómo se compara Bcrypt con otros algoritmos de hash?",
-            answer: "En comparación con algoritmos como MD5, SHA-1 o SHA-256, Bcrypt ofrece una seguridad superior para el almacenamiento de contraseñas. Mientras que MD5 y SHA-1 son muy rápidos, lo cual es beneficioso para otros propósitos criptográficos, esta velocidad es una desventaja para el almacenamiento de contraseñas, ya que facilita los ataques de fuerza bruta. Bcrypt equilibra seguridad y rendimiento, proporcionando mejor protección contra tales ataques."
+            answer: "En comparación con algoritmos como MD5, SHA-1 o SHA-256, Bcrypt ofrece una seguridad superior para el almacenamiento de contraseñas. Mientras que MD5 y SHA-1 son muy rápidos, lo cual en-es beneficioso para otros propósitos criptográficos, esta velocidad en-es una desventaja para el almacenamiento de contraseñas, ya que facilita los ataques de fuerza bruta. Bcrypt equilibra seguridad y rendimiento, proporcionando mejor protección contra tales ataques."
         },
         {
             question: "¿Cómo uso este generador?",
@@ -292,4 +292,4 @@ const BcryptGenerator: React.FC = () => {
     );
 };
 
-export default BcryptGenerator;
+export default BcryptGeneratorEs;

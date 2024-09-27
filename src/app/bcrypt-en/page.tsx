@@ -10,7 +10,7 @@ import { Label } from "@/components/ui/label";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Copy, Check, Facebook, Twitter, Github } from 'lucide-react';
 
-const BcryptGenerator: React.FC = () => {
+const BcryptGeneratorEn: React.FC = () => {
     const [encryptString, setEncryptString] = useState<string>('');
     const [encryptedHash, setEncryptedHash] = useState<string>('');
     const [rounds, setRounds] = useState<number>(12);
@@ -292,4 +292,4 @@ const BcryptGenerator: React.FC = () => {
     );
 };
 
-export default BcryptGenerator;
+export default BcryptGeneratorEn;
