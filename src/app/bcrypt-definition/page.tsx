@@ -18,7 +18,7 @@ const BcryptDefinitionEn = () => {
 
     const shareOnTwitter = () => {
         const url = encodeURIComponent(window.location.href);
-        const text = encodeURIComponent("Check out this awesome Username Generator!");
+        const text = encodeURIComponent("Check out this awesome Bcrypt Generator!");
         const shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
         window.open(shareUrl, '_blank', 'width=600,height=400');
     };
@@ -26,20 +26,19 @@ const BcryptDefinitionEn = () => {
     return (
         <>
             <div className="container mx-auto p-4 min-h-screen">
-                <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">Welcome to Bcrypt Generator &
-                    Checker</h1>
+                <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">Welcome to Bcrypt Generator & Checker</h1>
 
                 <Card>
                     <CardHeader>
-                        <CardTitle className="text-3xl font-bold">¿Qué es Bcrypt?</CardTitle>
+                        <CardTitle className="text-3xl font-bold">What is Bcrypt?</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-6">
                         <p className="text-lg">
-                            <strong>Bcrypt</strong> es una función de hash diseñada específicamente para proteger contraseñas.
-                            Desarrollada en 1999 por Niels Provos y David Mazières, está basada en el algoritmo de cifrado
-                            Blowfish. A diferencia de algoritmos más tradicionales como MD5 o SHA-1, Bcrypt incorpora un factor
-                            de coste que hace el proceso de generación del hash más lento y resistente a ataques de fuerza
-                            bruta.
+                            <strong>Bcrypt</strong> is a hash function specifically designed to protect passwords.
+                            Developed in 1999 by Niels Provos and David Mazières, it's based on the Blowfish encryption
+                            algorithm. Unlike more traditional algorithms like MD5 or SHA-1, Bcrypt incorporates a cost
+                            factor that makes the process of generating the hash slower and more resistant to brute force
+                            attacks.
                         </p>
 
                         <div className="flex justify-between items-center">
@@ -56,59 +55,58 @@ const BcryptDefinitionEn = () => {
                         </div>
 
                         <section>
-                            <h2 className="text-2xl font-semibold mb-3">¿Cómo funciona Bcrypt?</h2>
+                            <h2 className="text-2xl font-semibold mb-3">How does Bcrypt work?</h2>
                             <p className="mb-4">
-                                Bcrypt toma como entrada una contraseña y un valor adicional llamado sal (salt). El sal es un
-                                conjunto de datos aleatorios que se genera para cada contraseña antes de aplicar el algoritmo de
-                                hash.
+                                Bcrypt takes a password and an additional value called salt as input. The salt is a set of
+                                random data that is generated for each password before applying the hash algorithm.
                             </p>
-                            <p className="mb-2">El proceso de Bcrypt se desglosa en:</p>
+                            <p className="mb-2">The Bcrypt process breaks down into:</p>
                             <ul className="list-disc pl-6 space-y-2">
-                                <li><strong>Generación del Sal:</strong> Se genera un valor de sal aleatorio.</li>
-                                <li><strong>Concatenación:</strong> La contraseña se concatena con el sal.</li>
-                                <li><strong>Hashing:</strong> La combinación pasa por el algoritmo de Blowfish en múltiples
-                                    rondas.
+                                <li><strong>Salt Generation:</strong> A random salt value is generated.</li>
+                                <li><strong>Concatenation:</strong> The password is concatenated with the salt.</li>
+                                <li><strong>Hashing:</strong> The combination goes through the Blowfish algorithm in multiple
+                                    rounds.
                                 </li>
-                                <li><strong>Resultado:</strong> El hash final incluye el sal y el número de rondas.</li>
+                                <li><strong>Result:</strong> The final hash includes the salt and the number of rounds.</li>
                             </ul>
                         </section>
 
                         <section>
-                            <h2 className="text-2xl font-semibold mb-3">¿Por qué es importante el factor de coste?</h2>
+                            <h2 className="text-2xl font-semibold mb-3">Why is the cost factor important?</h2>
                             <p>
-                                El factor de coste determina cuántas veces se repite el proceso de hashing, aumentando la
-                                dificultad para realizar un ataque de fuerza bruta. A mayor factor de coste, más tiempo y
-                                recursos computacionales se requieren para generar o verificar un hash.
+                                The cost factor determines how many times the hashing process is repeated, increasing the
+                                difficulty of performing a brute force attack. The higher the cost factor, the more time and
+                                computational resources are required to generate or verify a hash.
                             </p>
                         </section>
 
                         <section>
-                            <h2 className="text-2xl font-semibold mb-3">Ventajas de Bcrypt</h2>
+                            <h2 className="text-2xl font-semibold mb-3">Advantages of Bcrypt</h2>
                             <ul className="list-disc pl-6 space-y-2">
-                                <li><strong>Resistencia a ataques de fuerza bruta:</strong> Diseñado para ser lento y consumir
-                                    más recursos.
+                                <li><strong>Resistance to brute force attacks:</strong> Designed to be slow and consume
+                                    more resources.
                                 </li>
-                                <li><strong>Protección contra ataques de sal duplicados:</strong> Utiliza un sal único para cada
-                                    contraseña.
+                                <li><strong>Protection against duplicate salt attacks:</strong> Uses a unique salt for each
+                                    password.
                                 </li>
-                                <li><strong>Actualización continua:</strong> Factor de coste ajustable para evolucionar con los
-                                    avances en hardware.
+                                <li><strong>Continuous updating:</strong> Adjustable cost factor to evolve with hardware
+                                    advancements.
                                 </li>
-                                <li><strong>Amplio soporte:</strong> Implementación fácil en una variedad de entornos.</li>
+                                <li><strong>Wide support:</strong> Easy implementation in a variety of environments.</li>
                             </ul>
                         </section>
 
                         <section>
-                            <h2 className="text-2xl font-semibold mb-3">Comparación con otros algoritmos de hash</h2>
+                            <h2 className="text-2xl font-semibold mb-3">Comparison with other hash algorithms</h2>
                             <p>
-                                Comparado con MD5, SHA-1 o SHA-256, Bcrypt ofrece mayor seguridad debido a su diseño orientado a
-                                proteger contraseñas. Mientras que MD5 y SHA-1 son extremadamente rápidos, Bcrypt equilibra
-                                seguridad y rendimiento, ofreciendo protección superior contra ataques de fuerza bruta.
+                                Compared to MD5, SHA-1, or SHA-256, Bcrypt offers greater security due to its design
+                                oriented towards protecting passwords. While MD5 and SHA-1 are extremely fast, Bcrypt
+                                balances security and performance, offering superior protection against brute force attacks.
                             </p>
                         </section>
 
                         <div className="flex justify-between items-center">
-                            <Link href="/bcrypt" passHref>
+                            <Link href="/bcrypt-en" passHref>
                                 <Button className="text-lg py-6">
                                     Try Bcrypt Generator & Checker
                                 </Button>
@@ -121,18 +119,18 @@ const BcryptDefinitionEn = () => {
                         </div>
 
                         <Alert>
-                            <AlertTitle>Nota importante</AlertTitle>
+                            <AlertTitle>Important Note</AlertTitle>
                             <AlertDescription>
-                                Bcrypt se ha convertido en un estándar de facto para la protección de contraseñas. Implementarlo
-                                en aplicaciones donde se manejan contraseñas es esencial para asegurar que los datos de los
-                                usuarios estén protegidos de posibles brechas de seguridad.
+                                Bcrypt has become a de facto standard for password protection. Implementing it in
+                                applications where passwords are handled is essential to ensure that user data is
+                                protected from potential security breaches.
                             </AlertDescription>
                         </Alert>
 
                         <Card className="w-full">
                             <CardContent className="py-6">
                                 <div className="flex flex-col items-center space-y-4">
-                                    <span className="text-lg font-semibold">Comparte esta definición de Bcrypt:</span>
+                                    <span className="text-lg font-semibold">Share this Bcrypt definition:</span>
                                     <div className="flex justify-center items-center space-x-6">
                                         <Button
                                             variant="outline"
@@ -160,13 +158,13 @@ const BcryptDefinitionEn = () => {
                         <Card className="w-full">
                             <CardContent className="py-6">
                                 <div className="flex flex-col items-center space-y-4 text-center">
-                                    <h2 className="text-sm font-semibold">Creado con ❤️ por @Datevid</h2>
+                                    <h2 className="text-sm font-semibold">Created with ❤️ by @Datevid</h2>
                                     <p className="text-sm text-gray-500">
-                                        Esta definición de Bcrypt fue creada con mucho entusiasmo para que todos puedan aprender
-                                        sobre seguridad de contraseñas.
+                                        This Bcrypt definition was created with great enthusiasm so that everyone can learn
+                                        about password security.
                                     </p>
                                     <p className="text-sm text-gray-500">
-                                        Si te gusta este contenido y quieres apoyar al desarrollador, ¡sígueme en GitHub y
+                                        If you like this content and want to support the developer, follow me on GitHub and
                                         Twitter!
                                     </p>
                                     <div className="flex space-x-4">
@@ -199,7 +197,7 @@ const BcryptDefinitionEn = () => {
                                     <Link href="/bcrypt-es">
                                         <Button variant="default" size="lg" className="flex items-center space-x-2">
                                             <ExternalLink className="h-5 w-5"/>
-                                            <span>Generar Hash Bcrypt</span>
+                                            <span>Generate Bcrypt Hash</span>
                                         </Button>
                                     </Link>
                                 </div>
@@ -208,9 +206,7 @@ const BcryptDefinitionEn = () => {
                     </CardContent>
                 </Card>
             </div>
-
         </>
-
     );
 };
 

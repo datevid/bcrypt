@@ -108,7 +108,7 @@ const BcryptDefinitionEs = () => {
                         </section>
 
                         <div className="flex justify-between items-center">
-                            <Link href="/bcrypt" passHref>
+                            <Link href="/bcrypt-en" passHref>
                                 <Button className="text-lg py-6">
                                     Try Bcrypt Generator & Checker
                                 </Button>
