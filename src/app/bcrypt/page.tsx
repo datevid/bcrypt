@@ -46,8 +46,21 @@ const BcryptGenerator: React.FC = () => {
         });
     };
 
-    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`;
-    const twitterShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent('Check out this Bcrypt Generator & Checker!')}`;
+    // const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`;
+    // const twitterShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent('Check out this Bcrypt Generator & Checker!')}`;
+
+    const shareOnFacebook = () => {
+        const url = encodeURIComponent(window.location.href);
+        const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+        window.open(shareUrl, '_blank', 'width=600,height=400');
+    };
+
+    const shareOnTwitter = () => {
+        const url = encodeURIComponent(window.location.href);
+        const text = encodeURIComponent("Check out this awesome Username Generator!");
+        const shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+        window.open(shareUrl, '_blank', 'width=600,height=400');
+    };
 
     const faqItems = [
         {
@@ -222,24 +235,24 @@ const BcryptGenerator: React.FC = () => {
                     <div className="flex flex-col items-center space-y-4">
                         <span className="text-lg font-semibold">Share this Bcrypt Generator & Checker:</span>
                         <div className="flex justify-center items-center space-x-6">
-                            <a
-                                href={facebookShareUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8"
+                            <Button
+                                variant="outline"
+                                size="lg"
+                                onClick={shareOnFacebook}
+                                className="flex items-center space-x-2"
                             >
-                                <Facebook className="h-5 w-5 mr-2" />
+                                <Facebook className="h-5 w-5"/>
                                 <span>Facebook</span>
-                            </a>
-                            <a
-                                href={twitterShareUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8"
+                            </Button>
+                            <Button
+                                variant="outline"
+                                size="lg"
+                                onClick={shareOnTwitter}
+                                className="flex items-center space-x-2"
                             >
-                                <Twitter className="h-5 w-5 mr-2" />
+                                <Twitter className="h-5 w-5"/>
                                 <span>Twitter</span>
-                            </a>
+                            </Button>
                         </div>
                     </div>
                 </CardContent>
