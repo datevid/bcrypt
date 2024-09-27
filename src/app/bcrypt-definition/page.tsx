@@ -35,7 +35,7 @@ const BcryptDefinitionEn = () => {
                     <CardContent className="space-y-6">
                         <p className="text-lg">
                             <strong>Bcrypt</strong> is a hash function specifically designed to protect passwords.
-                            Developed in 1999 by Niels Provos and David Mazières, it's based on the Blowfish encryption
+                            Developed in 1999 by Niels Provos and David Mazières, it is based on the Blowfish encryption
                             algorithm. Unlike more traditional algorithms like MD5 or SHA-1, Bcrypt incorporates a cost
                             factor that makes the process of generating the hash slower and more resistant to brute force
                             attacks.
