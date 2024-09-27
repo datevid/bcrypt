@@ -49,15 +49,31 @@ const BcryptGenerator: React.FC = () => {
     const faqItems = [
         {
             question: "What is Bcrypt?",
-            answer: "Bcrypt is a password hashing function designed to be slow and resistant to brute-force attacks. It's widely used for securely storing passwords."
+            answer: "Bcrypt is a password hashing function specifically designed to protect passwords. It was developed in 1999 by Niels Provos and David Mazières, based on the Blowfish encryption algorithm. Unlike traditional hash algorithms like MD5 or SHA-1, Bcrypt incorporates a cost factor that makes the hashing process slower and more resistant to brute-force attacks."
+        },
+        {
+            question: "How does Bcrypt work?",
+            answer: "Bcrypt works by taking a password and a random salt as input. The process involves: 1) Generating a random salt, 2) Concatenating the password with the salt, 3) Passing the combination through the Blowfish algorithm multiple times (determined by the cost factor), and 4) Producing a final hash that includes both the salt and the number of hashing rounds."
         },
         {
             question: "What are rounds in Bcrypt?",
-            answer: "Rounds in Bcrypt refer to the number of iterations used in the hashing process. More rounds increase the time and computational power needed to generate the hash, making it more resistant to attacks."
+            answer: "Rounds in Bcrypt refer to the cost factor or work factor. It determines how many times the hashing process is repeated. More rounds increase the time and computational power needed to generate the hash, making it more resistant to brute-force attacks. The number of rounds can be adjusted to balance security and performance needs."
+        },
+        {
+            question: "Why is the cost factor important?",
+            answer: "The cost factor is crucial because it determines the computational effort required to generate or verify a hash. A higher cost factor means more time and resources are needed, which significantly slows down brute-force attacks. It also allows Bcrypt to evolve with advances in hardware, maintaining its effectiveness over time."
         },
         {
             question: "Is Bcrypt reversible?",
             answer: "No, Bcrypt is not reversible. It's a one-way hashing function, which means you can't decrypt a Bcrypt hash back to the original password. You can only verify if a given password matches the hash."
+        },
+        {
+            question: "What are the advantages of Bcrypt?",
+            answer: "Bcrypt offers several advantages: 1) Strong resistance to brute-force attacks due to its slow hashing process, 2) Protection against rainbow table attacks by using unique salts for each password, 3) Adaptability to future hardware improvements through its adjustable cost factor, and 4) Wide support across various programming languages and platforms."
+        },
+        {
+            question: "How does Bcrypt compare to other hashing algorithms?",
+            answer: "Compared to algorithms like MD5, SHA-1, or SHA-256, Bcrypt offers superior security for password storage. While MD5 and SHA-1 are very fast, which is beneficial for other cryptographic purposes, this speed is a disadvantage for password storage as it facilitates brute-force attacks. Bcrypt balances security and performance, providing better protection against such attacks."
         },
         {
             question: "How do I use this generator?",
@@ -66,7 +82,7 @@ const BcryptGenerator: React.FC = () => {
     ];
 
     return (
-        <div className="container mx-auto p-4 bg-gray-100 min-h-screen">
+        <div className="container mx-auto p-4 min-h-screen">
             <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">Bcrypt Generator & Checker</h1>
 
             <div className="grid md:grid-cols-2 gap-8">
