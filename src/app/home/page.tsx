@@ -18,7 +18,7 @@ export default function Home() {
                 <CardContent>
                     <p className="text-lg mb-4">
                         This project provides a user-friendly interface for generating Bcrypt hashes and verifying
-                        passwords against existing hashes. It's designed to help developers and security enthusiasts
+                        passwords against existing hashes. It is designed to help developers and security enthusiasts
                         understand and utilize Bcrypt for password security.
                     </p>
                     <p className="text-lg mb-4">
