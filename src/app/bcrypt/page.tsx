@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Slider } from "@/components/ui/slider";
 import { Label } from "@/components/ui/label";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Copy, Check } from 'lucide-react';
+import { Copy, Check, Facebook, Twitter, Github } from 'lucide-react';
 
 const BcryptGenerator: React.FC = () => {
     const [encryptString, setEncryptString] = useState<string>('');
@@ -45,6 +45,9 @@ const BcryptGenerator: React.FC = () => {
             setTimeout(() => setCopiedIndex(null), 2000);
         });
     };
+
+    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`;
+    const twitterShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent('Check out this Bcrypt Generator & Checker!')}`;
 
     const faqItems = [
         {
@@ -211,6 +214,68 @@ const BcryptGenerator: React.FC = () => {
                             </AccordionItem>
                         ))}
                     </Accordion>
+                </CardContent>
+            </Card>
+
+            <Card className="w-full mt-8">
+                <CardContent className="py-6">
+                    <div className="flex flex-col items-center space-y-4">
+                        <span className="text-lg font-semibold">Share this Bcrypt Generator & Checker:</span>
+                        <div className="flex justify-center items-center space-x-6">
+                            <a
+                                href={facebookShareUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8"
+                            >
+                                <Facebook className="h-5 w-5 mr-2" />
+                                <span>Facebook</span>
+                            </a>
+                            <a
+                                href={twitterShareUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8"
+                            >
+                                <Twitter className="h-5 w-5 mr-2" />
+                                <span>Twitter</span>
+                            </a>
+                        </div>
+                    </div>
+                </CardContent>
+            </Card>
+
+            <Card className="w-full mt-8">
+                <CardContent className="py-6">
+                    <div className="flex flex-col items-center space-y-4 text-center">
+                        <h2 className="text-sm font-semibold">Created with ❤️ by @Datevid</h2>
+                        <p className="text-sm text-gray-500">
+                            This Bcrypt Generator & Checker was created with enthusiasm for everyone to use freely.
+                        </p>
+                        <p className="text-sm text-gray-500">
+                            If you like this tool and want to support the developer, follow me on GitHub and Twitter!
+                        </p>
+                        <div className="flex space-x-4">
+                            <a
+                                href="https://github.com/datevid"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-4"
+                            >
+                                <Github className="h-4 w-4 mr-2" />
+                                <span>GitHub</span>
+                            </a>
+                            <a
+                                href="https://twitter.com/datevid"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-4"
+                            >
+                                <Twitter className="h-4 w-4 mr-2" />
+                                <span>Twitter</span>
+                            </a>
+                        </div>
+                    </div>
                 </CardContent>
             </Card>
         </div>
