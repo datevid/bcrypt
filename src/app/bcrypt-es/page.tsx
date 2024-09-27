@@ -61,42 +61,42 @@ const BcryptGenerator: React.FC = () => {
 
     const faqItems = [
         {
-            question: "What is Bcrypt?",
-            answer: "Bcrypt is a password hashing function specifically designed to protect passwords. It was developed in 1999 by Niels Provos and David Mazières, based on the Blowfish encryption algorithm. Unlike traditional hash algorithms like MD5 or SHA-1, Bcrypt incorporates a cost factor that makes the hashing process slower and more resistant to brute-force attacks."
+            question: "¿Qué es Bcrypt?",
+            answer: "Bcrypt es una función de hash de contraseñas diseñada específicamente para proteger contraseñas. Fue desarrollada en 1999 por Niels Provos y David Mazières, basada en el algoritmo de cifrado Blowfish. A diferencia de los algoritmos de hash tradicionales como MD5 o SHA-1, Bcrypt incorpora un factor de costo que hace que el proceso de hash sea más lento y resistente a los ataques de fuerza bruta."
         },
         {
-            question: "How does Bcrypt work?",
-            answer: "Bcrypt works by taking a password and a random salt as input. The process involves: 1) Generating a random salt, 2) Concatenating the password with the salt, 3) Passing the combination through the Blowfish algorithm multiple times (determined by the cost factor), and 4) Producing a final hash that includes both the salt and the number of hashing rounds."
+            question: "¿Cómo funciona Bcrypt?",
+            answer: "Bcrypt funciona tomando una contraseña y un salt aleatorio como entrada. El proceso implica: 1) Generar un salt aleatorio, 2) Concatenar la contraseña con el salt, 3) Pasar la combinación a través del algoritmo Blowfish múltiples veces (determinado por el factor de costo), y 4) Producir un hash final que incluye tanto el salt como el número de rondas de hash."
         },
         {
-            question: "What are rounds in Bcrypt?",
-            answer: "Rounds in Bcrypt refer to the cost factor or work factor. It determines how many times the hashing process is repeated. More rounds increase the time and computational power needed to generate the hash, making it more resistant to brute-force attacks. The number of rounds can be adjusted to balance security and performance needs."
+            question: "¿Qué son las rondas en Bcrypt?",
+            answer: "Las rondas en Bcrypt se refieren al factor de costo o factor de trabajo. Determina cuántas veces se repite el proceso de hash. Más rondas aumentan el tiempo y la potencia computacional necesaria para generar el hash, haciéndolo más resistente a los ataques de fuerza bruta. El número de rondas se puede ajustar para equilibrar las necesidades de seguridad y rendimiento."
         },
         {
-            question: "Why is the cost factor important?",
-            answer: "The cost factor is crucial because it determines the computational effort required to generate or verify a hash. A higher cost factor means more time and resources are needed, which significantly slows down brute-force attacks. It also allows Bcrypt to evolve with advances in hardware, maintaining its effectiveness over time."
+            question: "¿Por qué es importante el factor de costo?",
+            answer: "El factor de costo es crucial porque determina el esfuerzo computacional requerido para generar o verificar un hash. Un factor de costo más alto significa que se necesita más tiempo y recursos, lo que ralentiza significativamente los ataques de fuerza bruta. También permite que Bcrypt evolucione con los avances en hardware, manteniendo su efectividad a lo largo del tiempo."
         },
         {
-            question: "Is Bcrypt reversible?",
-            answer: "No, Bcrypt is not reversible. It's a one-way hashing function, which means you can't decrypt a Bcrypt hash back to the original password. You can only verify if a given password matches the hash."
+            question: "¿Es Bcrypt reversible?",
+            answer: "No, Bcrypt no es reversible. Es una función de hash unidireccional, lo que significa que no puedes descifrar un hash Bcrypt de vuelta a la contraseña original. Solo puedes verificar si una contraseña dada coincide con el hash."
         },
         {
-            question: "What are the advantages of Bcrypt?",
-            answer: "Bcrypt offers several advantages: 1) Strong resistance to brute-force attacks due to its slow hashing process, 2) Protection against rainbow table attacks by using unique salts for each password, 3) Adaptability to future hardware improvements through its adjustable cost factor, and 4) Wide support across various programming languages and platforms."
+            question: "¿Cuáles son las ventajas de Bcrypt?",
+            answer: "Bcrypt ofrece varias ventajas: 1) Fuerte resistencia a los ataques de fuerza bruta debido a su proceso de hash lento, 2) Protección contra ataques de tabla arcoíris al usar salts únicos para cada contraseña, 3) Adaptabilidad a futuras mejoras de hardware a través de su factor de costo ajustable, y 4) Amplio soporte en varios lenguajes de programación y plataformas."
         },
         {
-            question: "How does Bcrypt compare to other hashing algorithms?",
-            answer: "Compared to algorithms like MD5, SHA-1, or SHA-256, Bcrypt offers superior security for password storage. While MD5 and SHA-1 are very fast, which is beneficial for other cryptographic purposes, this speed is a disadvantage for password storage as it facilitates brute-force attacks. Bcrypt balances security and performance, providing better protection against such attacks."
+            question: "¿Cómo se compara Bcrypt con otros algoritmos de hash?",
+            answer: "En comparación con algoritmos como MD5, SHA-1 o SHA-256, Bcrypt ofrece una seguridad superior para el almacenamiento de contraseñas. Mientras que MD5 y SHA-1 son muy rápidos, lo cual es beneficioso para otros propósitos criptográficos, esta velocidad es una desventaja para el almacenamiento de contraseñas, ya que facilita los ataques de fuerza bruta. Bcrypt equilibra seguridad y rendimiento, proporcionando mejor protección contra tales ataques."
         },
         {
-            question: "How do I use this generator?",
-            answer: "To encrypt, enter a string in the 'Encrypt' section and click 'Encrypt'. To verify a hash, enter the hash in the 'Hash to check' field and the string to check against in the 'String to check against' field, then click 'Check'."
+            question: "¿Cómo uso este generador?",
+            answer: "Para cifrar, ingresa una cadena en la sección 'Cifrar' y haz clic en 'Cifrar'. Para verificar un hash, ingresa el hash en el campo 'Hash a verificar' y la cadena a verificar en el campo 'Cadena a verificar', luego haz clic en 'Verificar'."
         },
     ];
 
     return (
         <div className="container mx-auto p-4 min-h-screen">
-            <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">Bcrypt Generator & Checker</h1>
+            <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">Generador y Verificador Bcrypt</h1>
 
             <div className="grid md:grid-cols-2 gap-8">
                 <Card>
@@ -213,7 +213,7 @@ const BcryptGenerator: React.FC = () => {
 
             <Card className="mt-8">
                 <CardHeader>
-                    <CardTitle className="text-xl font-semibold text-gray-700">Frequently Asked Questions</CardTitle>
+                    <CardTitle className="text-xl font-semibold text-gray-700">Preguntas Frecuentes</CardTitle>
                 </CardHeader>
                 <CardContent>
                     <Accordion type="single" collapsible className="w-full">
